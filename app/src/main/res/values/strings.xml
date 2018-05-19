@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ammonia Levels</string>
+    <string-array name="trains">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="ammonialevel">Current Ammonia Level: </string>
+    <string name="NumberofTrainsRunning">Number Of Trains Running: </string>
+    <string name="Submit">Submit</string>
+    <string name="CurrentAirSpeed">Current Air Speed: </string>
+    <string name="LevelToPumpAt">Level To Pump At: </string>
+    <string name="action_settings"></string>
+    <string name="clear">Clear</string>
+    <string name="title_activity_text">TextActivity</string>
+    <string name="quit">Quit</string>
+
+</resources>

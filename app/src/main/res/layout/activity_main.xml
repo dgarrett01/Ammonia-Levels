@@ -1,0 +1,164 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    tools:context="com.example.david.ammonialevels.MainActivity" >
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tabHost">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:visibility="visible"></TabWidget>
+
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true">
+
+                <LinearLayout
+                    android:id="@+id/whenToPump"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TableRow android:id="@+id/ammoniaLevelRow">
+
+                            <TextView
+                                android:id="@+id/textViewCurrentLevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ammonialevel" />
+
+                            <EditText
+                                android:id="@+id/editTextCurrentLevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="numberDecimal"
+                                android:maxLength="4" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/spinnerRow"
+                            android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:id="@+id/textViewNumberOfTrains"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/NumberofTrainsRunning" />
+
+                            <Spinner
+                                android:id="@+id/spinnerNumberOfTrains"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="75dp"
+                                android:layout_marginStart="75dp"
+                                android:entries="@array/trains"
+                                android:spinnerMode="dropdown" />
+                        </TableRow>
+
+                        <TableRow android:id="@+id/airRow">
+
+                            <TextView
+                                android:id="@+id/textViewAirSpeed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:labelFor="@+id/editTextAirSpeed"
+                                android:text="@string/CurrentAirSpeed" />
+
+                            <EditText
+                                android:id="@+id/editTextAirSpeed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="number" />
+                        </TableRow>
+
+                        <TableRow android:id="@+id/levelToPumpRow">
+
+                            <TextView
+                                android:id="@+id/textViewLevelToPump"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:labelFor="@+id/editTextLevelToPump"
+                                android:text="@string/LevelToPumpAt" />
+
+                            <EditText
+                                android:id="@+id/editTextLevelToPump"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:inputType="number" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/buttonsRow"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="start">
+
+                            <Button
+                                android:id="@+id/clearButton"
+                                style="@android:style/MediaButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:width="150dp"
+                                android:onClick="clearFields"
+                                android:text="@string/clear"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:id="@+id/submitButton"
+                                style="@android:style/MediaButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:width="150dp"
+                                android:onClick="showAnswer"
+                                android:text="@string/Submit"
+                                android:layout_weight="1" />
+
+                            <Button
+                                android:id="@+id/quitButton"
+                                style="@android:style/MediaButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:width="150dp"
+                                android:text="@string/quit"
+                                android:layout_weight="1"
+                                android:onClick="quitApp"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</TableLayout>
+
